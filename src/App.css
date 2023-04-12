@@ -1,38 +1,150 @@
+/* App container */
 .App {
-  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Input container */
+.App-input {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input field */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Result label */
+.App-input label {
+  font-size: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Result value */
+.App-input span {
+  font-size: 32px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Buttons container */
+.App-insertions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+/* Button styles */
+button {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  background-color: #555;
+  box-shadow: 0 3px 0 #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Button hover effect */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 #333;
+}
+
+/* AC button */
+.Button_AC {
+  background-color: #f44336;
+}
+
+/* Divide button */
+.Button_01 {
+  background-color: #4caf50;
+}
+
+/* Multiply button */
+.Button_02 {
+  background-color: #4caf50;
+}
+
+/* Percent button */
+.Button_03 {
+  background-color: #4caf50;
+}
+
+/* Subtraction button */
+.Button- {
+  background-color: #4caf50;
+}
+
+/* Addition button */
+.Button+ {
+  background-color: #4caf50;
+}
+
+/* Number buttons */
+.Button_1, .Button_2, .Button_3,
+.Button_4, .Button_5, .Button_6,
+.Button_7, .Button_8, .Button_9 {
+  background-color: #2196f3;
+}
+
+/* Zero button */
+.Button_0 {
+  grid-column: 2/3;
+  background-color: #2196f3;
+}
+
+/* Result button */
+.Button-result {
+  width: 120px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  background-color: #555;
+  box-shadow: 0 3px 0 #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Result button hover effect */
+.Button-result:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 #333;
+}
+
+/* Positioning */
+.App-insertions button:last-of-type {
+  grid-column: 1/3;
+}
+
+.App-insertions .Button-result {
+  grid-column: 3/4;
+}
+
+/* Input class */
+.inputClass {
+  border: 2px solid #2196f3;
+}
+
+.inputClass:focus {
+  outline: none;
+  box-shadow: 0 0 5px #2196f3;
+}
+
+.inputClass:hover {
+  border: 2px solid #2196f3;
 }
